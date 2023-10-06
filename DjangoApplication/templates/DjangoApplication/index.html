@@ -1,0 +1,26 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/index.css' %}">
+{% endblock %}
+
+{% block header %}
+{% include 'DjangoApplication/header.html' %}
+{% endblock %}
+{% block content %}
+<header>
+    </header>
+    <section class="homepage" id="home">
+      <div class="content">
+        <div class="text">
+          <h1>Bulat Bagaviev</h1>
+          <p>
+            it used to be easier, now they tighten the nuts hard <br> </p>
+        </div>
+        <a href="about">Рассказать о себе?</a>
+      </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,22 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/click.css' %}">
+{% endblock %}
+{% block header %}
+{% include 'DjangoApplication/header.html' %}
+{% endblock %}
+
+{% block content %}
+<section class="click" id="click">
+      <h2>Анекдот</h2>
+      <div class="row company-info">
+        <p>Пошли значит два грузина на охоту, на них медведь вышел, убили они его. На встречу им идет третий грузин и с удивлением говорит:"Ничего себе медведь здоровый!! Гризли что ли?" - Нет, душылы</p>
+      </div>
+
+
+    </section>
+{% endblock %}

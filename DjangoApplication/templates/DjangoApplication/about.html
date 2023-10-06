@@ -1,0 +1,45 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/about.css' %}">
+{% endblock %}
+{% block header %}
+{% include 'DjangoApplication/header.html' %}
+{% endblock %}
+{% block content %}
+<body>
+ <section class="services" id="services">
+      <h2>Немного фактов</h2>
+      <p>Выдуманных :)</p>
+      <ul class="cards">
+        <li class="card">
+          <h3>Кошки</h3>
+          <p>У меня лютая аллергия на кошек, но у меня две кошки</p>
+        </li>
+        <li class="card">
+          <h3>Спорт</h3>
+          <p>Я учавствовал в забеге на коровах.</p>
+        </li>
+        <li class="card">
+          <h3>Путешествия</h3>
+          <p>Я часто бываю в университете.</p>
+        </li>
+        <li class="card">
+          <h3>Семья</h3>
+          <p>У меня 24 брата и 13 сестер.</p>
+        </li>
+        <li class="card">
+          <h3>Хобби</h3>
+          <p>Уже третий год занимаюсь хобби-хорсингом.</p>
+        </li>
+        <li class="card">
+          <h3>Факт</h3>
+          <p>Раньше было проще, щас закручивают гайки жетско.</p>
+        </li>
+      </ul>
+    </section>
+</body>
+{% endblock %}
