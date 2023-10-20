@@ -1,0 +1,38 @@
+.features {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc; /* Добавляем рамку вокруг контейнера */
+    border-radius: 5px; /* Закругляем углы контейнера */
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #ccc; /* Добавляем рамку вокруг формы */
+    padding: 20px;
+    border-radius: 5px; /* Закругляем углы формы */
+}
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Добавляем рамку вокруг вводных полей */
+    border-radius: 4px;
+}
+
+.btn{
+    border: 2px solid #e34761; /* Параметры рамки */
+    border-radius: 5px;
+    background: #f3dbdf; /* Цвет фона */
+    font-size: 14px; /* Размер текста */
+    padding: 5px 20px; /* Поля вокруг текста */
+}

@@ -1,0 +1,28 @@
+{%extends 'DjangoApplication//base_layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ news.title }}
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'DjangoApplication/css/news_detail.css' %}">
+{% endblock %}
+
+{% block header %}
+{% include 'DjangoApplication/header.html' %}
+{% endblock %}
+{% block content %}
+<div class="news-container">
+    <div class="news">
+        <h1 class="news-title">{{ news.title }}</h1>
+        <p class="news-category">{{ news.category }}</p>
+        <img class="news-photo" src="{{ news.photo.url }}" alt="News Photo">
+        <p class="news-content">{{ news.content }}</p>
+        <p class="news-date">Опубликована в: {{ news.create_at }}</p>
+        <p class="news-author">Автор: {{ news.autor }}</p>
+        <a href="{% url 'edit_news' news.id %}" class="edit_button" type="submit">Редактировать</a>
+    </div>
+</div>
+
+{% endblock %}
