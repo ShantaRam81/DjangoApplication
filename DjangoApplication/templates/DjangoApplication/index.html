@@ -19,7 +19,9 @@
             {% for news_item in l_news %}
             <div class="news-card">
                 <p><strong>{{ news_item.category }}</strong></p>
-                <p><img src="{{ news_item.photo.url }}" width="200" height="200"></p>
+                {% if news_item.photo %}
+                    <img src="{{ MEDIA_URL }}{{ news_item.photo.url }}" width="200" height="200">
+                {% endif %}
                 <h2>{{ news_item.title }}</h2>
                 <p>{{ news_item.content }}</p>
                 <p>Автор: {{ news_item.autor }}</p>

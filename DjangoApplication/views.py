@@ -23,7 +23,7 @@ def news_detail(request, news_id):
 
 def add_news(request):
     if request.method == 'POST':
-        form = NewsForm(request.POST)
+        form = NewsForm(request.POST, request.FILES)
         if form.is_valid():
             news = form.save(commit=False)
             news.create_at = timezone.now()

@@ -1,11 +1,11 @@
 from .models import News
-from django.forms import ModelForm, TextInput, Textarea, Select
+from django.forms import ModelForm, TextInput, Textarea, Select, ImageField
 
 
 class NewsForm(ModelForm):
     class Meta:
         model = News
-        fields = ['title', 'content', 'autor', 'category']
+        fields = ['title', 'content', 'autor', 'category', 'photo']
         widgets = {
             "title": TextInput(attrs={
                 'class': 'form-control',

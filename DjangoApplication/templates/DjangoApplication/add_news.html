@@ -16,13 +16,14 @@
 {% block content %}
 <div class="features">
     <h1>Создание статьи</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.title }}<br>
         {{ form.content }}<br>
         {{ form.category }}<br>
         {{ form.autor }}<br>
         {{ form.create_at }}<br>
+        {{ form.photo }}<br>
         <button class="btn" type="submit">Добавить</button>
     </form>
 </div>

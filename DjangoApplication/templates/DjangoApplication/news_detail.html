@@ -17,7 +17,9 @@
     <div class="news">
         <h1 class="news-title">{{ news.title }}</h1>
         <p class="news-category">{{ news.category }}</p>
-        <img class="news-photo" src="{{ news.photo.url }}" alt="News Photo">
+        {% if news.photo %}
+            <img class="news-photo" src="{{ MEDIA_URL }}{{ news.photo.url }}" alt="News Photo">
+        {% endif %}
         <p class="news-content">{{ news.content }}</p>
         <p class="news-date">Опубликована в: {{ news.create_at }}</p>
         <p class="news-author">Автор: {{ news.autor }}</p>
